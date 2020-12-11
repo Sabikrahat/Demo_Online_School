@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_bg"
+    tools:context=".AdminPanel.AdminActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/back"
+            app:title="@string/admin"
+            app:titleTextColor="@color/comb_1" />
+
+        <Button
+            android:id="@+id/adminPanelAddAdminID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="10dp"
+            android:text="@string/add_admin"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelRemoveAdminID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddAdminID"
+            android:layout_margin="10dp"
+            android:text="@string/make_a_user_guest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddTeacherID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelRemoveAdminID"
+            android:layout_margin="10dp"
+            android:text="@string/add_teacher"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddTeacherID"
+            android:layout_margin="10dp"
+            android:text="@string/add_student"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddStudent"
+            android:layout_margin="10dp"
+            android:text="@string/add_a_new_batch"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelEditBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddBatch"
+            android:layout_margin="10dp"
+            android:text="@string/edit_a_batch_details"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelDeleteBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelEditBatch"
+            android:layout_margin="10dp"
+            android:text="@string/delete_a_batch"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelDisableUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelDeleteBatch"
+            android:layout_margin="10dp"
+            android:text="@string/disable_a_user"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelEnableUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelDisableUser"
+            android:layout_margin="10dp"
+            android:text="@string/enable_a_user"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelSearchUserByID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelEnableUser"
+            android:layout_margin="10dp"
+            android:text="@string/search_by_user_id"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelSearchStudentsByBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelSearchUserByID"
+            android:layout_margin="10dp"
+            android:text="@string/search_all_students_by_batch_name"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelSearchAllUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelSearchStudentsByBatch"
+            android:layout_margin="10dp"
+            android:text="@string/see_all_users"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddRecordedVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelSearchAllUsers"
+            android:layout_margin="10dp"
+            android:text="@string/add_recorded_videos"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelEditContactUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddRecordedVideos"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/edit_contact_us_info"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelEditRegistrationLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelEditContactUS"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/edit_guest_user_registration_link"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</ScrollView>

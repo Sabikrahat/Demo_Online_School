@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/student_bg"
+    tools:context=".StudentPanel.StudentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/back"
+            app:title="@string/student"
+            app:titleTextColor="@color/comb_1" />
+
+        <TextView
+            android:id="@+id/greetings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="serif"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textColor="@color/comb_1"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/liveClass"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/greetings"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/live"
+            android:text="@string/join_live_class"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/classRoutine"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/liveClass"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/routine"
+            android:text="@string/class_routine"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/recordedVideos"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/classRoutine"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/recorded_video"
+            android:text="@string/recoeded_videos"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/others"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/recordedVideos"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/download"
+            android:text="@string/others"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ContactUsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/back"
+            app:title="Contact Us"
+            app:titleTextColor="@color/comb_1" />
+
+        <ImageView
+            android:id="@+id/abc"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/toolbar"
+            android:src="@drawable/white_cover" />
+
+        <ImageButton
+            android:id="@+id/contactUsActivityPhoneImageButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abc"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_view_layout"
+            android:padding="8dp"
+            android:src="@drawable/phone" />
+
+        <ImageButton
+            android:id="@+id/contactUsActivityFacebookImageButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactUsActivityPhoneImageButtonID"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_view_layout"
+            android:padding="8dp"
+            android:src="@drawable/facebook" />
+
+        <ImageButton
+            android:id="@+id/contactUsActivityPersonalWebsiteImageButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactUsActivityFacebookImageButtonID"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_view_layout"
+            android:padding="2dp"
+            android:src="@drawable/website" />
+
+        <ImageButton
+            android:id="@+id/contactUsctivityGmailImageButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactUsActivityPersonalWebsiteImageButtonID"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_view_layout"
+            android:padding="8dp"
+            android:src="@drawable/gmail" />
+
+    </RelativeLayout>
+
+</ScrollView>

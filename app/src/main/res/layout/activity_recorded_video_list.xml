@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StudentPanel.RecordedVideoList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/back"
+            app:title="Recorded Videos"
+            app:titleTextColor="@color/comb_1" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/studentPanelSearchVideosEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/search_videos_by_date_dd_mm_yy"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            app:met_floatingLabel="normal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/studentPanelSearchVideosRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/studentPanelSearchVideosEditText"
+            android:padding="5dp"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</ScrollView>

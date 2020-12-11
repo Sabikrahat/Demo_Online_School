@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "474641261402",
+    "project_id": "online-school-sabikrahat-72428",
+    "storage_bucket": "online-school-sabikrahat-72428.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474641261402:android:3efd2042a8db0bd8090963",
+        "android_client_info": {
+          "package_name": "com.sabikrahat.demoonlineschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474641261402-3c745k93h8rdbtltap8fvhefqieaarlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADN7m7SuS6CmivdPFy_KhUa2JmUL1aMDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474641261402-3c745k93h8rdbtltap8fvhefqieaarlt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
