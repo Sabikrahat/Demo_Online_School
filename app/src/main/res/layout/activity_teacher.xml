@@ -24,6 +24,15 @@
             app:title="Teacher Panel"
             app:titleTextColor="@color/comb_1" />
 
+        <Button
+            android:id="@+id/adminPanelAddAdminID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="10dp"
+            android:text="Students Mark"
+            android:textAllCaps="false" />
+
     </RelativeLayout>
 
 </ScrollView>
