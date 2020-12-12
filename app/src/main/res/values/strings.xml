@@ -84,4 +84,5 @@
     <string name="done">Done</string>
     <string name="hey_guest_you_re_not_register_yet_as_a_student">Hey, Guest! You\'re not register yet as a student.</string>
     <string name="register_now">Register Now</string>
+    <string name="notice_board">Notice Board</string>
 </resources>

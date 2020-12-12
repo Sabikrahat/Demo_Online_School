@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,6 +44,7 @@ import com.sabikrahat.demoonlineschool.Model.BatchLink;
 import com.sabikrahat.demoonlineschool.Model.Post;
 import com.sabikrahat.demoonlineschool.Model.User;
 import com.sabikrahat.demoonlineschool.StudentPanel.StudentActivity;
+import com.sabikrahat.demoonlineschool.TeacherPanel.TeacherActivity;
 import com.sabikrahat.demoonlineschool.Webview.WebviewActivity;
 
 import java.text.SimpleDateFormat;
@@ -62,6 +64,7 @@ public class ApplicationActivity extends AppCompatActivity implements Navigation
 
     private FirebaseAuth mAuth;
 
+    private ScrollView scrollView;
     private EditText postWritten;
     private Button postButton;
     private RecyclerView recyclerView;
@@ -89,6 +92,12 @@ public class ApplicationActivity extends AppCompatActivity implements Navigation
         drawerProfileImage = mView.findViewById(R.id.drawer_profile);
         drawerTextView = mView.findViewById(R.id.drawer_profile_name);
 
+        scrollView = findViewById(R.id.ScrollID);
+        postWritten = findViewById(R.id.applicationPostEditTextID);
+        postButton = findViewById(R.id.applicationPostButtonID);
+        recyclerView = findViewById(R.id.applicationRecyclerViewID);
+        progressBar = findViewById(R.id.progress_circular);
+
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
 
@@ -102,6 +111,13 @@ public class ApplicationActivity extends AppCompatActivity implements Navigation
                     //hide or show
                     Menu menu = navigationView.getMenu();
                     menu.findItem(R.id.admin_panel).setVisible(false);
+                    scrollView.setVisibility(View.GONE);
+                    postWritten.setVisibility(View.GONE);
+                    postButton.setVisibility(View.GONE);
+                    if ((user.getStatus().equals("Student")) || ((user.getStatus().equals("Guest")))) {
+                        //hide or show
+                        menu.findItem(R.id.teacher_panel).setVisible(false);
+                    }
                 }
                 try {
                     Glide.with(ApplicationActivity.this).load(user.getImageURL()).into(drawerProfileImage);
@@ -116,11 +132,6 @@ public class ApplicationActivity extends AppCompatActivity implements Navigation
                 Toast.makeText(ApplicationActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-        postWritten = findViewById(R.id.applicationPostEditTextID);
-        postButton = findViewById(R.id.applicationPostButtonID);
-        recyclerView = findViewById(R.id.applicationRecyclerViewID);
-        progressBar = findViewById(R.id.progress_circular);
 
         postButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -335,6 +346,28 @@ public class ApplicationActivity extends AppCompatActivity implements Navigation
                             alertDialog.show();
                         } else {
                             Toast.makeText(ApplicationActivity.this, "You're disable.Please contact with the community.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(ApplicationActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                item.setCheckable(false);
+                break;
+
+            case R.id.teacher_panel:
+                //TODO: Teacher Panel
+                DatabaseReference dataRef = FirebaseDatabase.getInstance().getReference("Users");
+                dataRef.child(mAuth.getCurrentUser().getUid()).child("status").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if ((snapshot.getValue()).equals("Admin") || (snapshot.getValue()).equals("Teacher")) {
+                            startActivity(new Intent(ApplicationActivity.this, TeacherActivity.class));
+                        } else {
+                            Toast.makeText(ApplicationActivity.this, "Sorry! You're not an Teacher or an Admin.", Toast.LENGTH_SHORT).show();
                         }
                     }
 

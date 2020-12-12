@@ -67,7 +67,7 @@
         android:textColor="@color/black"
         android:textIsSelectable="true" />
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/layoutID2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -114,14 +114,14 @@
             android:textColor="#939292"
             android:textStyle="bold" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@+id/mediaLayoutID"
+        android:layout_height="3dp"
+        android:layout_below="@+id/description"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:background="#BFBEBE" />
 
 </RelativeLayout>

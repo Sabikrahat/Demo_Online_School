@@ -76,9 +76,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 });
 
         publisherInfo(holder.image_profile, holder.username, post.getPublisher());
-        isLiked(post.getPostid(), holder.like);
-        nrLikes(post.getPostid(), holder.likes);
-        getComments(post.getPostid(), holder.comments);
+        //isLiked(post.getPostid(), holder.like);
+        //nrLikes(post.getPostid(), holder.likes);
+        //getComments(post.getPostid(), holder.comments);
 
         holder.image_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +116,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             }
         });
 
-        holder.like.setOnClickListener(new View.OnClickListener() {
+        /*holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (holder.like.getTag().equals("like")) {
@@ -149,7 +149,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
-        });
+        });*/
 
         holder.more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,21 +208,21 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView image_profile, like, comment, more;
-        private TextView username, dateTime, description, likes, comments;
+        private ImageView image_profile, comment, more;
+        private TextView username, dateTime, description;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             image_profile = itemView.findViewById(R.id.image_profile);
-            like = itemView.findViewById(R.id.like);
+            //like = itemView.findViewById(R.id.like);
             comment = itemView.findViewById(R.id.comment);
             more = itemView.findViewById(R.id.more);
             username = itemView.findViewById(R.id.username);
             dateTime = itemView.findViewById(R.id.dateTime);
             description = itemView.findViewById(R.id.description);
-            likes = itemView.findViewById(R.id.likes);
-            comments = itemView.findViewById(R.id.comments);
+            //likes = itemView.findViewById(R.id.likes);
+            //comments = itemView.findViewById(R.id.comments);
         }
     }
 
@@ -244,7 +244,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         });
     }
 
-    private void isLiked(String postid, final ImageView imageView) {
+    /*private void isLiked(String postid, final ImageView imageView) {
         final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Likes").child(postid);
@@ -309,5 +309,5 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 Toast.makeText(mContext, "Error: " + error.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-    }
+    }*/
 }
