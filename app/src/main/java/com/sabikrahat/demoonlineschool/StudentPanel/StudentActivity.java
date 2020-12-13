@@ -102,7 +102,7 @@ public class StudentActivity extends AppCompatActivity {
                     mark.setVisibility(View.GONE);
                     comment.setVisibility(View.GONE);
                 } else {
-                    FirebaseDatabase.getInstance().getReference("StudentsMarks").child(user.getBatch()).child(user.getRid()).addValueEventListener(new ValueEventListener() {
+                    FirebaseDatabase.getInstance().getReference("StudentsMarks").child(user.getBatch()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if (snapshot.hasChild(user.getRid())) {
