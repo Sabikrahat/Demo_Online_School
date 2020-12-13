@@ -74,7 +74,5 @@ public class AssignMarkActivity extends AppCompatActivity {
                 startActivity(new Intent(AssignMarkActivity.this, BatchStudentsShowActivity.class).putExtra("batch", Batch));
             }
         });
-
-
     }
 }
