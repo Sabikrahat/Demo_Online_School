@@ -23,7 +23,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.sabikrahat.demoonlineschool.Model.AssignMark;
 import com.sabikrahat.demoonlineschool.Model.BatchLink;
+import com.sabikrahat.demoonlineschool.Model.User;
 import com.sabikrahat.demoonlineschool.R;
 import com.sabikrahat.demoonlineschool.Webview.WebviewActivity;
 
@@ -32,7 +34,7 @@ import java.util.List;
 
 public class StudentActivity extends AppCompatActivity {
 
-    private TextView grettings;
+    private TextView grettings, barMark, title, mark, comment;
     private Button liveClass, routine, recorded, others;
 
     private FirebaseAuth mAuth;
@@ -61,6 +63,10 @@ public class StudentActivity extends AppCompatActivity {
         routine = findViewById(R.id.classRoutine);
         recorded = findViewById(R.id.recordedVideos);
         others = findViewById(R.id.others);
+        barMark = findViewById(R.id.abc_xyz_mno);
+        title = findViewById(R.id.markTitle);
+        mark = findViewById(R.id.marks);
+        comment = findViewById(R.id.markComment);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -77,6 +83,46 @@ public class StudentActivity extends AppCompatActivity {
                 BatchLink batchLink_private = snapshot.getValue(BatchLink.class);
                 routineLink = batchLink_private.getClassRoutineDriveLink();
                 otherLink = batchLink_private.getOtherWebsiteLink();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(StudentActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        FirebaseDatabase.getInstance().getReference("Users").child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+
+                if (!(user.getStatus().equalsIgnoreCase("Student"))) {
+                    barMark.setVisibility(View.GONE);
+                    title.setVisibility(View.GONE);
+                    mark.setVisibility(View.GONE);
+                    comment.setVisibility(View.GONE);
+                } else {
+                    FirebaseDatabase.getInstance().getReference("StudentsMarks").child(user.getBatch()).child(user.getRid()).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            AssignMark assignMark = snapshot.getValue(AssignMark.class);
+                            if (assignMark.isShowable()) {
+                                title.setText(assignMark.getTitle());
+                                mark.setText(assignMark.getMark());
+                                comment.setText(assignMark.getComment());
+                            } else {
+                                title.setText(" N/A ");
+                                mark.setText(" N/A ");
+                                comment.setText(" N/A ");
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(StudentActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             }
 
             @Override

@@ -93,12 +93,6 @@ public class AddNewBatch extends AppCompatActivity {
                     return;
                 }
 
-                if (OtherLink.isEmpty()) {
-                    otherLink.setError("Enter the other website url");
-                    otherLink.requestFocus();
-                    return;
-                }
-
                 if (Class_1_Name.isEmpty()) {
                     class_1_name.setError("Enter a class name");
                     class_1_name.requestFocus();

@@ -81,6 +81,59 @@
             android:textAllCaps="false"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/abc_xyz_mno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/others"
+            android:layout_margin="5dp"
+            android:padding="3dp"
+            android:text="@string/marks"
+            android:textColor="@color/comb_1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/markTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abc_xyz_mno"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:padding="3dp"
+            android:text="@string/marks"
+            android:textColor="@color/comb_1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/marks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/markTitle"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:padding="3dp"
+            android:text="@string/marks"
+            android:textColor="@color/comb_1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/markComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marks"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:padding="3dp"
+            android:text="@string/marks"
+            android:textColor="@color/comb_1"
+            android:textSize="16sp" />
+
     </RelativeLayout>
 
 </ScrollView>

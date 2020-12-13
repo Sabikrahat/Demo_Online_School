@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TeacherPanel.AssignMarkActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/back"
+            app:title="Assign Mark"
+            app:titleTextColor="@color/comb_1" />
+
+        <TextView
+            android:id="@+id/abc_mno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:fontFamily="serif"
+            android:text="@string/assign_student_mark"
+            android:textAlignment="center"
+            android:textColor="@color/comb_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/xyz_0_abc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abc_mno"
+            android:textAlignment="textStart"
+            android:textSize="18sp">
+
+            <EditText
+                android:id="@+id/assignMarkTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/enter_subject_and_exam_name"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/xyz_abc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xyz_0_abc"
+            android:textAlignment="textStart"
+            android:textSize="18sp">
+
+            <EditText
+                android:id="@+id/assignMarkTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/enter_student_s_mark"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/xyz_2_mno"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xyz_abc"
+            android:textAlignment="textStart"
+            android:textSize="18sp">
+
+            <EditText
+                android:id="@+id/assignMarkComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/add_a_comment_or_suggestion"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat,TextFields" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/assignMarksAssignButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xyz_2_mno"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_bg"
+            android:padding="10dp"
+            android:text="@string/assign"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

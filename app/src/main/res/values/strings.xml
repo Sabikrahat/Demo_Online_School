@@ -85,4 +85,11 @@
     <string name="hey_guest_you_re_not_register_yet_as_a_student">Hey, Guest! You\'re not register yet as a student.</string>
     <string name="register_now">Register Now</string>
     <string name="notice_board">Notice Board</string>
+    <string name="assign_student_s_mark">Assign Student\'s Mark</string>
+    <string name="assign_student_mark">Assign Student Mark</string>
+    <string name="enter_student_s_mark">Enter student mark</string>
+    <string name="add_a_comment_or_suggestion">Add a comment or suggestion</string>
+    <string name="assign">Assign</string>
+    <string name="enter_subject_and_exam_name">Enter Subject and Exam Name</string>
+    <string name="marks">Marks:</string>
 </resources>
