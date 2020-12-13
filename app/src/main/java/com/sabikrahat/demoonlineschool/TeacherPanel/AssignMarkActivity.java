@@ -67,7 +67,7 @@ public class AssignMarkActivity extends AppCompatActivity {
                 }
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("StudentsMarks").child(Batch);
-                AssignMark assignMark = new AssignMark(Title, Mark, Comment, true);
+                AssignMark assignMark = new AssignMark(Title, Mark, Comment);
                 databaseReference.child(Rid).setValue(assignMark);
                 Toast.makeText(AssignMarkActivity.this, "Mark assigned", Toast.LENGTH_SHORT).show();
                 finish();

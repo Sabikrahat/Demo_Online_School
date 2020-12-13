@@ -105,11 +105,10 @@ public class StudentActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference("StudentsMarks").child(user.getBatch()).child(user.getRid()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            AssignMark assignMark = snapshot.getValue(AssignMark.class);
-                            if (assignMark.isShowable()) {
-                                title.setText(assignMark.getTitle());
-                                mark.setText(assignMark.getMark());
-                                comment.setText(assignMark.getComment());
+                            if (snapshot.hasChild(user.getRid())) {
+                                title.setText(snapshot.child(user.getRid()).child("title").getValue().toString());
+                                mark.setText(snapshot.child(user.getRid()).child("mark").getValue().toString());
+                                comment.setText(snapshot.child(user.getRid()).child("comment").getValue().toString());
                             } else {
                                 title.setText(" N/A ");
                                 mark.setText(" N/A ");

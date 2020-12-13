@@ -5,16 +5,14 @@ public class AssignMark {
     private String title;
     private String mark;
     private String comment;
-    private boolean isShowable;
 
     public AssignMark() {
     }
 
-    public AssignMark(String title, String mark, String comment, boolean isShowable) {
+    public AssignMark(String title, String mark, String comment) {
         this.title = title;
         this.mark = mark;
         this.comment = comment;
-        this.isShowable = isShowable;
     }
 
     public void setTitle(String title) {
@@ -29,10 +27,6 @@ public class AssignMark {
         this.comment = comment;
     }
 
-    public void setShowable(boolean showable) {
-        isShowable = showable;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -43,9 +37,5 @@ public class AssignMark {
 
     public String getComment() {
         return comment;
-    }
-
-    public boolean isShowable() {
-        return isShowable;
     }
 }
