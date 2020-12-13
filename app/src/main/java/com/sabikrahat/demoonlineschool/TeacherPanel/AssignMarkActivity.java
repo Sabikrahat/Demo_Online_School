@@ -70,6 +70,8 @@ public class AssignMarkActivity extends AppCompatActivity {
                 AssignMark assignMark = new AssignMark(Title, Mark, Comment, true);
                 databaseReference.child(Rid).setValue(assignMark);
                 Toast.makeText(AssignMarkActivity.this, "Mark assigned", Toast.LENGTH_SHORT).show();
+                finish();
+                startActivity(new Intent(AssignMarkActivity.this, BatchStudentsShowActivity.class).putExtra("batch", Batch));
             }
         });
 

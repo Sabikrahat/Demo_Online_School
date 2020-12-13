@@ -41,7 +41,7 @@ public class StudentActivity extends AppCompatActivity {
     private FirebaseUser mUser;
 
     private BatchLink batchLink;
-    private String Batch, routineLink, otherLink, selectedBatch = "";
+    private String Batch, routineLink, otherLink = "", selectedBatch = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,9 +157,13 @@ public class StudentActivity extends AppCompatActivity {
         others.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudentActivity.this, WebviewActivity.class);
-                intent.putExtra("WebCode", otherLink);
-                startActivity(intent);
+                if (otherLink.equals("")) {
+                    Toast.makeText(StudentActivity.this, "This option is not available yet for your batch.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(StudentActivity.this, WebviewActivity.class);
+                    intent.putExtra("WebCode", otherLink);
+                    startActivity(intent);
+                }
             }
         });
     }
