@@ -106,9 +106,9 @@ public class StudentActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if (snapshot.hasChild(user.getRid())) {
-                                title.setText(snapshot.child(user.getRid()).child("title").getValue().toString());
-                                mark.setText(snapshot.child(user.getRid()).child("mark").getValue().toString());
-                                comment.setText(snapshot.child(user.getRid()).child("comment").getValue().toString());
+                                title.setText("Title: " + snapshot.child(user.getRid()).child("title").getValue().toString());
+                                mark.setText("Mark: " + snapshot.child(user.getRid()).child("mark").getValue().toString());
+                                comment.setText("Comment: " + snapshot.child(user.getRid()).child("comment").getValue().toString());
                             } else {
                                 title.setText(" N/A ");
                                 mark.setText(" N/A ");
