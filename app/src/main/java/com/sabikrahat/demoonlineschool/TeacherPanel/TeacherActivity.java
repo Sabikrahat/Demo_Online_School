@@ -129,7 +129,7 @@ public class TeacherActivity extends AppCompatActivity {
                     Toast.makeText(TeacherActivity.this, "Please select a batch.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Intent intent = new Intent(TeacherActivity.this, StudentListActivity.class);
+                Intent intent = new Intent(TeacherActivity.this, BatchStudentsShowActivity.class);
                 intent.putExtra("batch", selectedBatch);
                 startActivity(intent);
                 alertDialog.dismiss();
