@@ -9,7 +9,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -92,43 +93,345 @@
             android:textColor="@color/comb_1"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/markTitle"
+        <LinearLayout
+            android:id="@+id/ly_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/abc_xyz_mno"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
             android:padding="3dp"
-            android:text="@string/marks"
-            android:textColor="@color/comb_1"
-            android:textSize="16sp" />
+            android:weightSum="10">
 
-        <TextView
-            android:id="@+id/marks"
+            <TextView
+                android:id="@+id/title_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/markTitle"
+            android:layout_below="@+id/ly_1"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_2"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_3"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_4"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_5"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_6"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_7"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_8"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_9"
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="3dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mark_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:text="@string/marks"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_10"
             android:layout_marginStart="40dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
-            android:layout_marginBottom="3dp"
-            android:padding="3dp"
-            android:text="@string/marks"
-            android:textColor="@color/comb_1"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/markComment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/marks"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="7dp"
             android:padding="3dp"
             android:text="@string/marks"
             android:textColor="@color/comb_1"
