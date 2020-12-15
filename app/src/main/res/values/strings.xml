@@ -92,7 +92,7 @@
     <string name="assign">Assign</string>
     <string name="enter_subject_and_exam_name">Enter Subject and Exam Name</string>
     <string name="marks">Marks:</string>
-    <string name="subject_name">Subject Name</string>
+    <string name="subject_name">Exam Title</string>
     <string name="mark">Mark</string>
     <string name="title">Title:</string>
 </resources>

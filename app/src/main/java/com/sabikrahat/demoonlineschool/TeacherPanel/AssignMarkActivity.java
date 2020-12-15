@@ -72,7 +72,7 @@ public class AssignMarkActivity extends AppCompatActivity {
         FirebaseDatabase.getInstance().getReference("StudentsMarks").child(Batch).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.hasChild(Rid)){
+                if (snapshot.hasChild(Rid)) {
                     AssignMark assignMark = snapshot.child(Rid).getValue(AssignMark.class);
                     title_1.setText(assignMark.getTitle_1());
                     mark_1.setText(assignMark.getMark_1());
