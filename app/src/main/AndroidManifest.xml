@@ -16,7 +16,7 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoOnlineSchool">
-        <activity android:name=".TeacherPanel.AssignMarkActivity"></activity>
+        <activity android:name=".TeacherPanel.AssignMarkActivity" />
         <activity android:name=".TeacherPanel.BatchStudentsShowActivity" />
         <activity android:name=".TeacherPanel.TeacherActivity" />
         <activity android:name=".StudentListActivity" />
