@@ -93,11 +93,25 @@
             android:textColor="@color/comb_1"
             android:textSize="20sp" />
 
+
+
+        <TextView
+            android:id="@+id/examTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abc_xyz_mno"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:text="@string/marks"
+            android:textColor="@color/comb_1"
+            android:textSize="18sp" />
+
         <LinearLayout
             android:id="@+id/ly_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/abc_xyz_mno"
+            android:layout_below="@+id/examTitle"
             android:layout_marginStart="40dp"
             android:background="@color/white"
             android:orientation="horizontal"
@@ -428,10 +442,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ly_10"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginBottom="7dp"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
             android:padding="3dp"
             android:text="@string/marks"
             android:textColor="@color/comb_1"

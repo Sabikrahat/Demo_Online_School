@@ -21,7 +21,7 @@ import com.sabikrahat.demoonlineschool.R;
 
 public class AssignMarkActivity extends AppCompatActivity {
 
-    private EditText title_1, mark_1, title_2, mark_2, title_3, mark_3, title_4, mark_4, title_5, mark_5,
+    private EditText examTitle, title_1, mark_1, title_2, mark_2, title_3, mark_3, title_4, mark_4, title_5, mark_5,
             title_6, mark_6, title_7, mark_7, title_8, mark_8, title_9, mark_9, title_10, mark_10, comment;
     private Button assign;
 
@@ -46,6 +46,7 @@ public class AssignMarkActivity extends AppCompatActivity {
         Rid = intent.getStringExtra("targetRID");
         Batch = intent.getStringExtra("targetBatch");
 
+        examTitle = findViewById(R.id.examTitle);
         title_1 = findViewById(R.id.title_1);
         mark_1 = findViewById(R.id.mark_1);
         title_2 = findViewById(R.id.title_2);
@@ -74,6 +75,7 @@ public class AssignMarkActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.hasChild(Rid)) {
                     AssignMark assignMark = snapshot.child(Rid).getValue(AssignMark.class);
+                    examTitle.setText(assignMark.getExamTitle());
                     title_1.setText(assignMark.getTitle_1());
                     mark_1.setText(assignMark.getMark_1());
                     title_2.setText(assignMark.getTitle_2());
@@ -108,9 +110,16 @@ public class AssignMarkActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String ExamTitle = examTitle.getText().toString();
                 String Title_1 = title_1.getText().toString();
                 String Mark_1 = mark_1.getText().toString();
                 String Comment = comment.getText().toString();
+
+                if (ExamTitle.isEmpty()) {
+                    examTitle.setError("Enter the exam title");
+                    examTitle.requestFocus();
+                    return;
+                }
 
                 if (Mark_1.isEmpty()) {
                     mark_1.setError("Enter the mark");
@@ -125,7 +134,7 @@ public class AssignMarkActivity extends AppCompatActivity {
                 }
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("StudentsMarks").child(Batch);
-                AssignMark assignMark = new AssignMark(Title_1, Mark_1, title_2.getText().toString(), mark_2.getText().toString(),
+                AssignMark assignMark = new AssignMark(ExamTitle, Title_1, Mark_1, title_2.getText().toString(), mark_2.getText().toString(),
                         title_3.getText().toString(), mark_3.getText().toString(), title_4.getText().toString(), mark_4.getText().toString(),
                         title_5.getText().toString(), mark_5.getText().toString(), title_6.getText().toString(), mark_6.getText().toString(),
                         title_7.getText().toString(), mark_7.getText().toString(), title_8.getText().toString(), mark_8.getText().toString(),

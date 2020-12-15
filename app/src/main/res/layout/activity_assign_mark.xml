@@ -38,10 +38,22 @@
             android:textStyle="bold" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/title_1"
+            android:id="@+id/examTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/abc_mno"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/exam_title"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/title_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/examTitle"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="150dp"

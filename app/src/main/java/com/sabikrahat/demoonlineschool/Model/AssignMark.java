@@ -2,6 +2,7 @@ package com.sabikrahat.demoonlineschool.Model;
 
 public class AssignMark {
 
+    private String examTitle;
     private String title_1;
     private String mark_1;
     private String title_2;
@@ -27,7 +28,8 @@ public class AssignMark {
     public AssignMark() {
     }
 
-    public AssignMark(String title_1, String mark_1, String title_2, String mark_2, String title_3, String mark_3, String title_4, String mark_4, String title_5, String mark_5, String title_6, String mark_6, String title_7, String mark_7, String title_8, String mark_8, String title_9, String mark_9, String title_10, String mark_10, String comment) {
+    public AssignMark(String examTitle, String title_1, String mark_1, String title_2, String mark_2, String title_3, String mark_3, String title_4, String mark_4, String title_5, String mark_5, String title_6, String mark_6, String title_7, String mark_7, String title_8, String mark_8, String title_9, String mark_9, String title_10, String mark_10, String comment) {
+        this.examTitle = examTitle;
         this.title_1 = title_1;
         this.mark_1 = mark_1;
         this.title_2 = title_2;
@@ -49,6 +51,10 @@ public class AssignMark {
         this.title_10 = title_10;
         this.mark_10 = mark_10;
         this.comment = comment;
+    }
+
+    public void setExamTitle(String examTitle) {
+        this.examTitle = examTitle;
     }
 
     public void setTitle_1(String title_1) {
@@ -133,6 +139,10 @@ public class AssignMark {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getExamTitle() {
+        return examTitle;
     }
 
     public String getTitle_1() {
